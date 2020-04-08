@@ -1,0 +1,60 @@
+什么是正向代理，什么是反向代理？nginx反向代理应用场景：
+https://www.cnblogs.com/taostaryu/p/10547132.html
+https://www.zhihu.com/question/24723688
+https://www.tuicool.com/articles/M7bAnqy
+https://baijiahao.baidu.com/s?id=1652608869911988442
+正向代理代理的对象是客户端，反向代理代理的对象是服务端
+正向代理可以隐藏真实客户端，反向代理可以隐藏真实服务端
+VPN是正向代理 nginx是反向代理
+
+
+nginx作用：隐藏真实服务器，负载均衡，缓存等
+nginx本质上是一个http server
+nginx仅仅是一个请求转发器
+nginx工作原理：
+接受客户端的请求，根据客户端的请求和配置文件配置的规则，做相应的请求转发
+
+client ---> nginx http server ---> real http server|
+client <--- nginx http server <--- real http server|
+
+
+windows下nginx配置和使用：
+官方下载：
+http://nginx.org/en/download.html
+http://nginx.org/download/nginx-1.16.1.zip
+
+官方文档：
+http://nginx.org/en/docs/
+http://nginx.org/en/docs/windows.html
+
+
+两个重要的东西 nginx.exe /conf/nginx.conf
+start nginx  #开始
+nginx -s [signal]
+signal:
+stop — fast shutdown
+quit — graceful shutdown
+reload — reloading the configuration file
+reopen — reopening the log files
+
+
+例子： 
+静态文件服务器
+反向代理http请求
+
+
+root = ip + port
+http://nginx.org/en/docs/http/ngx_http_core_module.html#root
+http://nginx.org/en/docs/http/ngx_http_autoindex_module.html
+http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass
+
+
+用几行代码诠释原理 python http server demo:
+http server:    https://www.liaoxuefeng.com/wiki/1016959663602400/1017805733037760
+http request:   https://www.cnblogs.com/666666pingzi/p/10089849.html
+
+
+
+扩展：
+相关视频 https://www.bilibili.com/video/BV1Bx411Z7Do
+OpenResty
