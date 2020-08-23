@@ -53,7 +53,10 @@ http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_pass
 http server:    https://www.liaoxuefeng.com/wiki/1016959663602400/1017805733037760
 http request:   https://www.cnblogs.com/666666pingzi/p/10089849.html
 
+nginx -t  #测试默认配置文件
 
+centos
+/etc/nginx/nginx.conf
 
 扩展：
 相关视频 https://www.bilibili.com/video/BV1Bx411Z7Do
